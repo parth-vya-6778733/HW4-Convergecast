@@ -10,7 +10,7 @@ import java.lang.String;
 
 
 
-public class BinaryTree {
+public class Convergecast {
 
 
     private String nodesConcatenated = "";
@@ -86,21 +86,22 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
         {
 
-
             value=root.data;
 
+            left=getMaximumRec(root.left);
 
-            left = getMaximumRec(root.left);
-
-            right = getMaximumRec(root.right);
+            right=getMaximumRec(root.right);
 
             this.toString(root);
 
 
             if(left>right)
+
             {
+
                 max=left;
-                System.out.println("Node Max left: " + max);
+      //          System.out.println(max);
+
             }
 
             else
@@ -108,7 +109,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
             {
 
                 max=right;
-                System.out.println("Node Max right: " + max);
+             //   System.out.println(max);
             }
 
 
@@ -118,8 +119,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
             {
 
                 max=value;
-                System.out.println("Node Max value: " + max);
-
+            //    System.out.println(max);
             }
 
         }
@@ -132,7 +132,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
     public void toString(TreeNode root)
     {
-        nodesConcatenated = nodesConcatenated + Integer.toString(root.data) + ",";
+        nodesConcatenated = nodesConcatenated + Integer.toString(root.data) + "";
     }
 
     public static  String nodesconcatenateRec(TreeNode root)
@@ -201,7 +201,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
     {
 
-        BinaryTree bi=new BinaryTree();
+        Convergecast bi=new Convergecast();
 
         // Creating a binary tree
 
@@ -223,7 +223,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
         // I used tree which was given in Homework4
 
-                 /*          2  (Root)
+                 /*          						2  (Root)
 
                   *                            / \
 
@@ -249,7 +249,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
         TreeNode node10=new TreeNode(5);
 
-        TreeNode node30=new TreeNode(11);
+        TreeNode node30=new TreeNode(2);
 
         TreeNode node60=new TreeNode(6);
 
@@ -257,7 +257,7 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
 
         TreeNode node70=new TreeNode(5);
 
-        TreeNode node90=new TreeNode(2);
+        TreeNode node90=new TreeNode(11);
 
         TreeNode node80=new TreeNode(4);
 
