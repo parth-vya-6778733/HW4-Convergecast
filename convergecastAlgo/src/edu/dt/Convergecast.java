@@ -100,7 +100,6 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
             {
 
                 max=left;
-      //          System.out.println(max);
 
             }
 
@@ -109,7 +108,6 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
             {
 
                 max=right;
-             //   System.out.println(max);
             }
 
 
@@ -119,7 +117,6 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
             {
 
                 max=value;
-            //    System.out.println(max);
             }
 
         }
@@ -134,67 +131,6 @@ Implement the converge-cast algorithm as a recursion. [Input to the program is t
     {
         nodesConcatenated = nodesConcatenated + Integer.toString(root.data) + "";
     }
-
-    public static  String nodesconcatenateRec(TreeNode root)
-
-    {
-
-        //int max=Integer.MIN_VALUE;
-
-// int value=0;
-
-// int left,right;
-
-        if(root == null)
-
-            return null;
-
-        // root ->left -> right per-order
-
-        String var1 =Integer.toString(root.data);
-
-        //  value=root.data;
-
-        //concat
-
-        {
-
-            if (root.left != null)
-
-            {
-                var1 = var1.concat(Integer.toString(root.left.data));
-                nodesconcatenateRec(root.left);
-            }
-
-
-
-            // value=root.data;
-
-            //concat
-
-            if (root.right != null)
-
-            {
-
-                    var1= var1.concat(Integer.toString(root.right.data));
-
-                    //  System.out.println(var1);
-
-
-                nodesconcatenateRec(root.right);
-
-            }
-
-        }
-
-        return var1;
-
-
-
-
-
-    }
-
 
 
     public static void main(String[] args)
